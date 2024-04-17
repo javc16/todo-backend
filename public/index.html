@@ -7,5 +7,33 @@
 </head>
 <body>
   <h1>Todo Api</h1>
+  <h2>Endpoints</h2>
+  
+  <h3>
+    post method : https://todo-backend-production-f174.up.railway.app/api/auth/register  with body {name,email,password}
+  </h3> 
+  <span>This method creates a new user, sends the email validation and return the token</span>
+
+  <h3>
+    post method : https://todo-backend-production-f174.up.railway.app/api/auth/login  with body {email,password}
+  </h3> 
+  <span>Method to login</span>
+
+  <h3>
+    get method : https://todo-backend-production-f174.up.railway.app/api/auth/validate-email/:token
+  </h3> 
+  <span>email link to click and validate your account</span>
+
+  <h3>
+    post method : https://todo-backend-production-f174.up.railway.app/api/todo  with body {name}
+  </h3> 
+  <span>Creates a new todo, needs a token to works</span>
+
+  <h3>
+    get method : https://todo-backend-production-f174.up.railway.app/api/todo
+  </h3>  
+  <span>Get all todos</span>
+
+  
 </body>
 </html>
