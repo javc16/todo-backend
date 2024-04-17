@@ -9,7 +9,7 @@ export class TodoService{
 
     async createTodo( createTodoDto: CreateTodoDto, user: UserEntity) {
         const todotExists = await TodoModel.findOne({ name: createTodoDto.name});
-        if( !todotExists ) throw CustomError.badRequest('Todo already exists!');
+        if( todotExists ) throw CustomError.badRequest('Todo already exists!');
 
         try{
             const todo = new TodoModel({
